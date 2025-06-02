@@ -85,4 +85,24 @@
   border-radius: 50px;
   font-size: 18px;
 }
+
+.hero-box a:hover {
+  background-color: rgb(100, 0, 171);
+}
+
+@media (max-width: 575px) {
+  .hero-box p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  .hero-box h1 {
+    font-size: 30px;
+  }
+
+  .hero-box p {
+    font-size: 14px;
+  }
+}
 /* Hero End */
