@@ -58,6 +58,15 @@
 
 /* Hero Start */
 .hero-box {
-  background-image: url(/assets/images/hero.webp)
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/assets/images/hero.webp);
+  width: 100%;
+  border-radius: 25px;
+  padding: 100px 20px;
+  color: #fff;
+}
+
+.hero-box h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
 }
 /* Hero End */
