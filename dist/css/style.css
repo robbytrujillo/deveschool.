@@ -69,4 +69,11 @@
   margin-bottom: 20px;
   font-size: 40px;
 }
+
+.hero-box p {
+  margin-bottom: 30px;
+  line-height: 2;
+  width: 500px;
+  opacity: 75%; // normalnya 100%, supaya tidak terlalu terang
+}
 /* Hero End */
