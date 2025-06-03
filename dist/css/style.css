@@ -133,4 +133,25 @@
   line-height: 2;
   text-align: justify;
 }
+
+.about .info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; // agar posisnya otomatis kebawah jika layarnya mengecil
+  gap: 30px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.about .info h2 span {
+  color: indigo;
+  font-size: 40px;
+}
+
+@media (max-width: 768px) {
+  .about-box {
+    grid-template-columns: 1fr; 
+  }
+}
 /* About Us End */
