@@ -155,3 +155,41 @@
   }
 }
 /* About Us End */
+
+/* Academic Start */
+.academic {
+  padding-bottom: 100px;
+}
+
+.academic-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.academic-box .box {
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.academic-box img {
+  width: 100%;
+  /* height: 100%; */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.academic-box .desc {
+  padding: 20px;
+}
+
+.academic-box .desc p {
+  line-height: 2;
+}
+
+@media (max-width: 575px) {
+  .academic-box {
+    gap: 40px;
+  }
+}
+/* Academic End */
