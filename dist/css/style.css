@@ -41,7 +41,7 @@
 
 .navbar-box .menu li a {
   text-decoration: none; // supaya underline menghilang
-  color: #000;
+  color: black;
 }
 
 @media (max-width: 768px) {
@@ -274,5 +274,82 @@ footer {
   margin-top: 20px;
   display: flex;
   align-items: center;
+  gap: 20px;
+}
+
+.footer-box .social a {
+  font-size: 28px;
+  text-decoration: none;
+  color: white;
+}
+
+.footer-box .social a:hover {
+  color: indigo;
+}
+
+.footer-box .box:nth-child(2) {
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-box .box:nth-child(2) h2 {
+  margin-bottom: 0;
+}
+
+.footer-box .box:nth-child(2) a {
+  text-decoration: none;
+  font-size: 14px;
+  color: white;
+}
+
+.footer-box .box:nth-child(2) a:hover {
+  color: indigo;
+}
+
+.footer-box .box:nth-child(3) {
+  width: 300px;
+}
+
+.footer-box .box:nth-child(3) p {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.copyright {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 14px;
+}
+
+.copyright p span {
+  font-weight: bold;
 }
 /* Footer End */
+
+/* Scroll Up Start */
+.scroll-up {
+  width: 50px;
+  height: 50px;
+  background-color: indigo;
+  color: white;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.scroll-up.scroll-active {
+  opacity: 1;
+}
+/* Scroll Up End */
