@@ -212,4 +212,31 @@
   border-radius: 20px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
 }
+
+.ppdb-box h2 {
+  margin-bottom: 10px;
+}
+
+.ppdb-box p {
+  line-height: 2;
+  margin-bottom: 20px;
+}
+
+.ppdb-box a {
+  text-decoration: none;
+  color: white;
+  background-color: indigo;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.ppdb-box a:hover {
+  background-color: rgb(100, 0, 171);
+}
+
+@media (max-width: 768px) {
+  .ppdb-box {
+    grid-template-columns: 1fr;
+  }
+}
 /* PPDB End */
