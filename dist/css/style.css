@@ -359,6 +359,16 @@ footer {
 .copyright p span {
   font-weight: bold;
 }
+
+.copyright p span a {
+    color: rebeccapurple;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.copyright p span a:hover {
+    color: white;
+}
 /* Footer End */
 
 /* Scroll Up Start */
