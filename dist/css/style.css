@@ -36,23 +36,51 @@
 }
 
 .navbar-box .menu li {
-  list-style-type: none; // menghilangkan titik pada menu
+  list-style-type: none; 
 }
 
 .navbar-box .menu li a {
-  text-decoration: none; // supaya underline menghilang
+  text-decoration: none; 
   color: black;
 }
 
-@media (max-width: 768px) {
-  .navbar-box {
-    flex-direction: column;
-  }
+/* ri-menu-line remix icon */
+.navbar-box .ri-menu-line {
+    display: none;
+    font-weight: bold;
+}
 
-  .navbar-box .menu {
-    flex-wrap: wrap;
-    justify-content: center; // agar ke tengah
-  }
+@media (max-width: 768px) {
+    .navbar-box .ri-menu-line {
+      display: block;
+    }
+
+    /* .navbar-box {
+      flex-direction: column;
+    } */
+
+    .navbar-box .menu {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      position: absolute;
+      top: -100%;
+      left: 50%;
+      transform: translateX(-50%);
+      flex-direction: column;
+      text-align: center;
+      background-color: rebeccapurple;
+      width: 100%;
+      padding: 40px 0 40px 0;
+      transition: all .2s ease-in-out;
+      /* supaya delaynya lebih smooth */
+      opacity: 0;
+    }
+
+    .navbar-box .menu.menu-active {
+        top: 100px;
+        opacity: 1;
+    }
 }
 /* Navbar End */
 
@@ -353,3 +381,79 @@ footer {
   opacity: 1;
 }
 /* Scroll Up End */
+
+/* Hamburger Style */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Change to X when active */
+.hamburger.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Menu Style Start */
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li a {
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .menu li a:hover {
+    background-color: #444;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Menu Style End */
